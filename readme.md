@@ -2,7 +2,9 @@
 
 Various containers to build Python from source. All of the necessary build dependencies are installed.
 
-An example of using this container to build a CentOS7 Python RPM:
+Build times are significantly quicker with Python >= 3.8.
+
+An example of using these containers to build a CentOS7 Python RPM:
 
 ```console
 $ docker run -v $(pwd):/build bsidebotham/python-builder:centos7
