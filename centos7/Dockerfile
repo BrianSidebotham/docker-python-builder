@@ -28,7 +28,7 @@ RUN yum install -y centos-release-scl \
             zlib-devel \
     && source /usr/bin/scl_source enable devtoolset-9 \
     && gcc --version \
-    mkdir -p build/SPECS
+    && mkdir -p build/SPECS
 
 COPY SPECS/*.spec build/SPECS/
 COPY build.sh build.sh
