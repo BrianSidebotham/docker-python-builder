@@ -24,6 +24,9 @@ $ ls -l ./RPMS/x86_64/
 -rw-r--r--. 1 root root 31839876 Mar 31 17:00 python38-3.8.8-1.el7.x86_64.rpm
 -rw-r--r--. 1 root root 32228720 Mar 31 16:55 python39-3.9.2-1.el7.x86_64.rpm
 ```
+> **NOTE:** You can only do multiple builds in the same volume if you're doing different python
+> versions for the same OS. If you try to build for a different OS in the same volume you are
+> likely to get (possibly subtle!) issues.
 
 ## ENVIRONMENT VARIABLES
 
