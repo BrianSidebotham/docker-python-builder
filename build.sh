@@ -7,6 +7,8 @@
 # e.g. build.sh centos7 3.9.2
 # If you don't supply any arguments the lastest CentOS7 image will be built
 
+scriptdir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
 OS=${1:-centos7}
 PYTHONVERSION=${2:-3.9.2}
 
