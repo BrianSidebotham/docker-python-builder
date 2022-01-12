@@ -2,7 +2,7 @@
 
 scriptdir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
-PYTHONVERSIONS="3.6.13 3.7.10 3.8.10 3.9.2"
+PYTHONVERSIONS="3.8.10 3.9.9 3.10.1"
 OS="centos7 centos8 ubuntu18.04 ubuntu20.04 ubuntu21.04"
 
 for os in ${OS}; do
