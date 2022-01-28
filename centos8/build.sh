@@ -11,9 +11,7 @@ cp -r /staging/build/* /build/
 
 cd /build && mkdir -p BUILD BUILDROOT RPMS SOURCES SPECS SRPMS
 
-source /usr/bin/scl_source enable devtoolset-9
-
-echo "Building python ${PYTHONVERSION}"
+echo "Building python ${PYTHONVERSION} using $(gcc --version)"
 
 spectool -C SOURCES --define "python_version ${PYTHONVERSION}" -g -S SPECS/python.spec
 if [ $? -ne 0 ]; then
