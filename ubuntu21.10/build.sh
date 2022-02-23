@@ -43,7 +43,7 @@ Version: ${PYTHONVERSION}-1
 Maintainer: Brian Sidebotham
 Architecture: amd64
 Description: Python ${PYTHONVERSION} relocateable package
-Depends: liblzma5, bzip2, libsqlite3-0, libncurses6, uuid, libreadline5, libgdbm6, zlib1g, libssl1.1
+Depends: liblzma5, bzip2, libsqlite3-0, libncurses6, uuid, libreadline8, libgdbm6, zlib1g, libssl1.1
 EOF
 
 dpkg-deb --build /build/${VERSION_ID}/${PYTHONVERSION}/install /build/${VERSION_ID}/${PYTHONVERSION}/python${PYTHONMAJORMINOR}-ubuntu-${UBUNTU_CODENAME}_${PYTHONVERSION}-2_amd64.deb
