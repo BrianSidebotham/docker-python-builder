@@ -20,8 +20,10 @@ RUN apt-get update \
             libreadline-dev \
             libgdbm-dev \
             zlib1g-dev \
-            libncursesw5-dev \
+            libncurses-dev \
             libssl-dev \
+    && apt-get clean \
+    && apt-get autoremove --yes \
     && mkdir /build
 
 COPY build.sh build.sh
