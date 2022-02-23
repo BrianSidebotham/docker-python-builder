@@ -11,7 +11,7 @@ scriptdir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 
 OS=${1:-centos7}
 PYTHONVERSION=${2:-3.10.2}
-CONTAINERBASE=${3:-bsidebotham/python-builder}
+CONTAINERBASE=${3:-ghcr.io/briansidebotham/docker-python-builder}
 mkdir -p build/${OS} && cd build/${OS}
 
 echo "Building Python ${PYTHONVERSION} for ${OS}"
