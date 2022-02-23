@@ -7,7 +7,7 @@ Build times are significantly quicker with Python >= 3.8.
 An example of using these containers to build a CentOS7 Python RPM:
 
 ```console
-$ docker run -v $(pwd):/build bsidebotham/python-builder:centos7
+$ docker run -v $(pwd):/build ghcr.io/briansidebotham/docker-python-builder:centos8
 ...
 
 $ ls -l ./RPMS/x86_64/
@@ -17,7 +17,7 @@ $ ls -l ./RPMS/x86_64/
 You can go ahead and build other versions too using the `PYTHONVERSION` environment variable:
 
 ```console
-$ docker run -e PYTHONVERSION=3.8.8 -v $(pwd):/build bsidebotham/python-builder:centos7
+$ docker run -e PYTHONVERSION=3.8.8 -v $(pwd):/build ghcr.io/briansidebotham/docker-python-builder:centos8
 ...
 
 $ ls -l ./RPMS/x86_64/
