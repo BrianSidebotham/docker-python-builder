@@ -1,6 +1,5 @@
 FROM ubuntu:20.04
 
-# An Ubuntu 18:04 container with all the pre-requisites for building Python
 WORKDIR /staging
 
 ENV PYTHONVERSION 3.9.2
