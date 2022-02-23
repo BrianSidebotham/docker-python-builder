@@ -1,4 +1,4 @@
-FROM centos:centos8
+FROM quay.io/centos/centos:stream8
 
 # A CentOS 8 container with all of the pre-requisites for building Python
 WORKDIR /staging
