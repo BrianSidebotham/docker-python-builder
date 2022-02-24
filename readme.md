@@ -28,6 +28,8 @@ $ ls -l ./RPMS/x86_64/
 > versions for the same OS. If you try to build for a different OS in the same volume you are
 > likely to get (possibly subtle!) issues.
 
+If you're looking for a container with a specific version of Python on head over to the [docker-python](https://github.com/BrianSidebotham/docker-python) project. The [docker-python-builder releases](https://github.com/BrianSidebotham/docker-python-builder/releases) are used to build another set of containers for just that purpose.
+
 ## ENVIRONMENT VARIABLES
 
 - `PYTHONVERSION` The verison of Python to build and package
