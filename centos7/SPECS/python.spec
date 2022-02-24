@@ -63,6 +63,11 @@ tar -C %{_builddir} -xf %{SOURCE0}
 %build
 cd %{_builddir}/Python-%{python_version}
 
+# Force Python to use the EPEL OpenSSL 1.1.. package because otherwise it cannot find the APIs it requires
+# when you get to Python 3.10
+# See https://stackoverflow.com/a/70159198/1073171 for further information
+sed -i 's/PKG_CONFIG openssl /PKG_CONFIG openssl11 /g' ./configure
+
 LDFLAGS="-Wl,-rpath=\\\$\$ORIGIN/../lib" \
 CFLAGS="${RPM_OPT_FLAGS}" \
 ./configure --prefix=%{install_directory} \
