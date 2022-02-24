@@ -27,8 +27,10 @@ BuildRequires: sqlite-devel
 BuildRequires: make
 BuildRequires: sqlite-devel
 BuildRequires: zlib-devel
+BuildRequires: gdbm-devel
 
 Requires: bzip2
+Requires: gdbm
 Requires: libarchive
 Requires: libffi
 Requires: libuuid
