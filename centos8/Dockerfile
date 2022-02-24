@@ -15,6 +15,7 @@ RUN yum -y install dnf-plugins-core \
             bzip2-devel \
             gcc \
             gcc-c++ \
+            gdbm-devel \
             glibc-devel \
             libarchive-devel \
             libffi-devel \
@@ -29,7 +30,9 @@ RUN yum -y install dnf-plugins-core \
             xz-devel \
             zlib-devel \
     && gcc --version \
-    && mkdir -p build/SPECS
+    && mkdir -p build/SPECS \
+    && yum clean all \
+    && rm -vrf /var/cache/yum/*
 
 COPY SPECS/*.spec build/SPECS/
 COPY build.sh build.sh
