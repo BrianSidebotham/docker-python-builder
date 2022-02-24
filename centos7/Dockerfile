@@ -14,6 +14,7 @@ RUN yum install -y centos-release-scl \
     && yum install -y autoconf \
             automake \
             bzip2-devel \
+            gdbm-devel \
             libarchive-devel \
             libffi-devel \
             libnsl2-devel \

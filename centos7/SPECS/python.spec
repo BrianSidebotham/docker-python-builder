@@ -29,15 +29,17 @@ BuildRequires: sqlite-devel
 BuildRequires: zlib-devel
 
 Requires: bzip2
+Requires: gdbm
 Requires: libarchive
 Requires: libffi
 Requires: libuuid
 Requires: ncurses
 Requires: openssl11
 Requires: readline
+Requires: sqlite
 Requires: xz
 Requires: zlib
-Requires: sqlite
+
 
 # Do not try to determine dependencies automatically. Otherwise the RPM tools come across .py files
 # with shebang's that point to /usr/local/bin/python and that becomes a dependency. As we're
