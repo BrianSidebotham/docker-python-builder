@@ -15,7 +15,7 @@ Summary: Wanless Systems Python %{python_contracted_version}
 License: PSF
 Source0: https://www.python.org/ftp/python/%{version}/Python-%{python_version}.tar.xz
 
-BuildRequires: openssl-devel
+BuildRequires: openssl11-devel
 BuildRequires: ncurses-devel
 BuildRequires: readline-devel
 BuildRequires: libarchive-devel
@@ -33,7 +33,7 @@ Requires: libarchive
 Requires: libffi
 Requires: libuuid
 Requires: ncurses
-Requires: openssl
+Requires: openssl11
 Requires: readline
 Requires: xz
 Requires: zlib

@@ -9,8 +9,9 @@ ENV PYTHONVERSION 3.9.2
 RUN yum install -y centos-release-scl \
     && yum clean all \
     && yum update -y \
+    && yum install -y epel-release \
     && yum install -y devtoolset-9-gcc* \
-            autoconf \
+    && yum install -y autoconf \
             automake \
             bzip2-devel \
             libarchive-devel \
@@ -18,7 +19,7 @@ RUN yum install -y centos-release-scl \
             libnsl2-devel \
             libuuid-devel \
             make \
-            openssl-devel \
+            openssl11-devel \
             ncurses-devel \
             readline-devel \
             rpmdevtools \
