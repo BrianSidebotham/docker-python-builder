@@ -6,8 +6,6 @@ name: Docker CentOS 7 Container Build
 # documentation.
 
 on:
-  schedule:
-    - cron: '43 23 * * *'
   push:
     branches: [ main ]
     # Publish 2021-01 style tags as releases.
