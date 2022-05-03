@@ -1,4 +1,4 @@
-name: Docker CentOS 7 Container Build
+name: Docker Ubuntu 22.04 Container Build
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -16,8 +16,7 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
-  OS: centos7
-
+  OS: ubuntu22.04
 
 jobs:
   build:
