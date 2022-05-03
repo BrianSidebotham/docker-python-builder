@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: PrepareReg Names
         run: |
-          echo IMAGE_NAME=$(echo ${{ github.repository }}-${{ env.OS }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+          echo IMAGE_NAME=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
 
       - name: Checkout repository
         uses: actions/checkout@v2
