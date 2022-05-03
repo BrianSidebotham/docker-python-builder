@@ -1,4 +1,4 @@
-name: Docker Ubuntu 22.04 Container Build
+name: Package Build and Push
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -16,10 +16,12 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
-  OS: ubuntu22.04
 
 jobs:
   build:
+    strategy:
+      matrix:
+        os: [ "centos7", "centos8", "ubuntu20.04", "ubuntu21.10", "ubuntu22.04"]
 
     runs-on: ubuntu-latest
     permissions:
@@ -73,10 +75,10 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v2
         with:
-          context: ${{ env.OS }}/
-          file: ${{ env.OS }}/Dockerfile
+          context: ${{ matrix.os }}/
+          file: ${{ matrix.os }}/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.OS }}
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ matrix.os }}
           labels: ${{ steps.meta.outputs.labels }}
 
       # # Sign the resulting Docker image digest except on PRs.
