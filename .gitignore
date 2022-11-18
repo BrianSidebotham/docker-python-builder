@@ -3,3 +3,5 @@
 !.gitignore
 build
 *.log
+!.flake8
+venv

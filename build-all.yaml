@@ -1,0 +1,12 @@
+# Keep these versions pinned to the currently-supported versions of Python
+stable_versions:
+  - 3.8
+  - 3.9
+  - 3.10
+  - 3.11
+
+os:
+  - ubuntu22.04
+  - ubuntu20.04
+  - centos7
+  - centos8

@@ -15,4 +15,5 @@ CONTAINERBASE=${3:-ghcr.io/briansidebotham/docker-python-builder}
 mkdir -p build/${OS} && cd build/${OS}
 
 echo "Building Python ${PYTHONVERSION} for ${OS}"
-docker run -e PYTHONVERSION=${PYTHONVERSION} -v $(pwd):/build ${CONTAINERBASE}:${OS}
+docker run -e PYTHONVERSION=${PYTHONVERSION} -v $(pwd):/build ${CONTAINERBASE}:${OS} > build-${PYTHONVERSION}.log 2>&1
+
